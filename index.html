@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Recipe Store</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="recipes.js"></script>
+    </head>
+    
+    <nav class="nav-bar" >ChefDishes</nav>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.href='upload.html'">Upload Recipe</button>
+            <button onclick="window.location.href='contact.html'">Contact Us</button>
+            <button onclick="window.location.href='about.html'">About Us</button>
+        </div>
+    <body>
+
+        <input type="text" placeholder="Search for Recipes🍴" style="margin-top: 10px;">
+        <button >Search</button>
+        
+        <main>
+            <section class="recipe-container">
+                <div class="recipe-card">
+                    <h3>Roasted Tomato Pasta</h3>
+                    <p>Delicious pasta with roasted tomatoes and mozzarella cheese.</p>
+                    <span class="badge">15 Mins</span>
+                    <img class="recipe-container-pictures" src="https://media.istockphoto.com/id/1189709277/photo/pasta-penne-with-roasted-tomato-sauce-mozzarella-cheese-grey-stone-background-top-view.jpg?s=612x612&w=is&k=20&c=ZlfL1M5DBB1V4WtWt_cFBTcMpUvSSCTzwZODCWI-9IE=">
+                    <button onclick="window.location.href='RTP.html'">View Recipe</button>  
+                </div>
+
+                <div class="recipe-card">
+                    <h3>Classic Spaghetti</h3>
+                    <p>A timeless spaghetti recipe with rich tomato sauce.</p>
+                    <span class="badge">15 Mins</span>
+                    <img class="recipe-container-pictures" src="https://cdn.pixabay.com/photo/2017/08/06/06/44/pasta-2589585_1280.jpg">
+                    <button onclick="window.location.href='CS.html'">View Recipe</button>
+                </div>
+
+                <div class="recipe-card">
+                    <h3>Burger</h3>
+                    <p>Delicious pasta with roasted tomatoes and mozzarella cheese.</p>
+                    <span class="badge">15 Mins</span>
+                    <img class="recipe-container-pictures" src="https://cdn.pixabay.com/photo/2022/08/31/10/15/burger-7422959_1280.jpg">
+                    <button onclick="window.location.href='BUR.html'">View Recipe</button>  
+                </div>
+
+                <div class="recipe-card">
+                    <h3>Spaghetti Bolognese</h3>
+                    <p>Hearty spaghetti with a savory Bolognese sauce.</p>
+                    <span class="badge">15 Mins</span>
+                    <img class="recipe-container-pictures" src="https://media.istockphoto.com/id/1144823591/photo/spaghetti-in-a-dish-on-a-white-background.jpg?s=612x612&w=is&k=20&c=Q2bFVE-Dun0cP6k458lLECzQX_ipYHQ2ZScyBou6yQQ=">
+                    <button onclick="window.location.href='SB.html'">View Recipe</button>
+                </div>
+            </section>
+        </main>
+
+        <div id="menu-board"></div>
+
+        <footer>
+            <div class="footer-container"></div>
+            <div class="footer-section">
+            <h4>ChefDishes</h4>
+            <p>Bringing World Class recipes to your kitchen</p>
+            </div>
+            <div class="footer-section"><a href="about.html">About Us</a></div>
+            <div class="footer-section">Quick links
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ai-recipes.html">Experiment</a></li>
+                    <li><a href="upload.html">Upload Recipes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section"><a href="contact.html">Contact Us</a></div>
+            <div class="footer-bottom">
+                &copy; 2026 ChefDishes | All Rights Reserved
+            </div>
+        </footer>
+        
+
+        <script>
+            console.log(myRecipes);
+            function showMnu(){
+                const board=document.getElementById("menu-board");
+                myRecipes.forEach(function(dish){
+                    board.innerHTML +=`
+                    <div class="recipe-card">
+                        <h3>${dish.title}</h3>
+                        <p>Cooked by:${dish.chef}</p>
+                        <p>INGREDIENTS:${dish.ingredients}</p>
+                        <p>INSTRUCTIONS:${dish.instructions}</p>
+                        <img src=${dish.image}</p>
+                        </div>
+                    `;
+                });
+            }
+
+            function detail_eng(title){
+                console.log(title);
+            }
+        
+            /*showMenu();*/
+        </script>
+
+    </body>
+</html>
