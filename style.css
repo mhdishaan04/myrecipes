@@ -1,0 +1,196 @@
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.nav-bar{
+    
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-family: cursive;
+    font-weight: 700;
+    color: white;
+    background-color: #193C40;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.nav-buttons{
+    text-align: center;
+    background-color: #193C40;
+    padding: 10px;
+    word-spacing: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.nav-buttons button{
+    border-color: #ffffff;
+    border: none;
+    background-color: #000000;
+    color: white;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+}
+
+
+
+.recipe-contaier{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 50px 10%;
+    margin: 0 auto;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img{
+    width: 400px;
+    height: 300px;
+}
+
+.recipe-card button{
+    text-align: center;
+    background-color: #193C40;
+    color: white;
+    border-width: 5px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+
+@media (max-width: 600px) {
+    .recipe-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
+
+
+.recipe-card{
+    border: 1px solid #000000;
+    margin-top: 10px ;
+    
+    overflow:hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.badge{
+    position: absolute;
+    background: #ff4757;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: small;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.upload-form{
+    border-radius: 10px ;
+    font-weight: bold ;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.upload-form input,textarea{
+    border-radius: 10px;
+   
+}
+
+.upload-button{
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgb(0, 5, 5);
+    text-align: center;
+}
+
+.upload-form-body{
+    background-color: rgb(228, 221, 170);
+}
+
+.upload-form p,h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.recipe-header img{
+    width: 400px;
+    height: 300px;
+
+}
+.recipe-det{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#floater{
+    position: absolute;
+    padding-top: 340px;
+    display: block;
+    justify-content: center;
+
+}
+
+
+
+
+
+
+footer{
+    font-family: cursive;
+    background-color:#A62B1F;
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 20px;
+    
+}
+
+footer h4{
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+footer p{
+    font-style: italic;
+}
+
+
+
+.footer-bottom{
+    text-align: center;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-top: 20px;
+    font-size: 0.8rem ;
+}
+
+
