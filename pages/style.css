@@ -3,7 +3,8 @@
 }
 
 h3 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:sans-serif;
+    font-size: 1.5rem;
 }
 
 a {
@@ -29,8 +30,6 @@ a {
     background-color: #193C40;
     padding: 10px;
     gap: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 .nav-buttons button {
@@ -40,6 +39,7 @@ a {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px; 
+    border: none;
 }
 
 .recipe-container {
@@ -47,22 +47,23 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 50px 10%;
-    max-width: 1200px;
+    width: auto;
     margin: 0 auto;
 }
 
 
 .recipe-card {
-    border: 1px solid #000000;
+    border-radius: 20px;
     overflow: hidden;
     text-align: center;
     padding-bottom: 20px;
-    transition: transform 0.3s;
-    background: white; 
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-out; 
 }
 
 .recipe-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 0 20px 10px rgb(0, 0, 0);
 }
 
 .recipe-card img {
@@ -81,7 +82,7 @@ a {
     display: block;
 }
 
-.badge {
+/*.badge {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -91,29 +92,46 @@ a {
     border-radius: 15px;
     font-size: small;
     font-weight: bold;
-}
-.recipe-header {
-    text-align: center; 
-    position: relative;
-    padding: 20px;
+}*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 
+.recipe-header {
+    text-align: center;
+}
 
 #floater {
-    color: chartreuse;
-    background-color: rgba(0,0,0,0.5);
+    font-family: sans-serif;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.856);
     padding: 10px;
-    display: inline-block;
-    margin-bottom: 10px;
+    margin: -1px;
 }
 
 
 .recipe-image-details {
-    width: 100%; 
-    max-width: 100%; 
+    display: grid;
+    text-align: center;
+    width: 100%;  
     max-height: 700px; 
-    border-radius: 10px;
+    margin: 0;
 }
+
+.recipe-details{
+
+}
+
+.ingredients,.instructions{
+    background-color: #000000de;
+    color: white;
+    padding: 14px;
+    margin: 0;
+}
+
 
 .contact-form{
     text-align: center;
@@ -152,24 +170,67 @@ a {
 
 
 footer {
+    height: 100%;
+    width: 100%;
     font-family: cursive;
-    background-color: #A62B1F;
+    background-color:#193C40;
     color: white;
     padding: 20px;
-    margin-top: 50px;
-    border-radius: 20px 20px 0 0;
+    margin-top: auto;
     text-align: center; 
+}
+.footer-head{
+    text-align: left;
+}
+
+.link-content{
+    text-align: center;
+    display: grid;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.3);
-    margin-top: 20px;
-    padding-top: 10px;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    padding: 10px;
+    margin-top: 10px;
     font-size: 0.8rem;
 }
 
+.search-bar{
+    text-align:center;
+    background-color: #000000;
+    padding: 20px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
 
-@media (max-width: 600px) {
+.search-box{
+    width: 100%;
+    padding: 5px;
+    border-radius: 0 ;
+    border: none;
+}
+
+.search-button{
+    background-color: #6f6f6f;
+    text-align:center;
+    max-width: 70px;
+    padding: 5px;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    border: none;
+}
+
+li{
+    padding: 10px;
+    font-family:sans-serif;
+    font-weight: 600;
+    font-size: larger;
+}
+
+
+@media (max-width: 667px) {
     .recipe-container {
         padding: 10px;
         grid-template-columns: 1fr; 
@@ -184,6 +245,26 @@ footer {
     }
 
     .nav-buttons button {
-        width: 100%; 
+        width: 100%;
     }
+    .search-button{
+        margin-top: 10px;
+    }
+    .search-box{
+    }
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-container {
+    flex: 1;
 }

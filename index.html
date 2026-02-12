@@ -9,14 +9,15 @@
     <nav class="nav-bar" >ChefDishes</nav>
         <div class="nav-buttons">
             <button onclick="window.location.href='./index.html'">Home</button>
-            <button onclick="window.location.href='./pages/upload.html'">Upload Recipe</button>
             <button onclick="window.location.href='./pages/contact.html'">Contact Us</button>
             <button onclick="window.location.href='./pages/about.html'">About Us</button>
         </div>
     <body>
-
-        <input type="text" placeholder="Search for Recipes🍴" style="margin-top: 10px;">
-        <button >Search</button>
+    <div class="search-bar">
+        <input class="search-box" type="text" placeholder="Search for Recipes🍴" style="margin-top: 10px;">
+        <button class="search-button">Search</button>
+    </div>
+        
         
         <main>
             <section class="recipe-container">
@@ -56,49 +57,20 @@
 
         <div id="menu-board"></div>
 
-        <footer>
-            <div class="footer-container"></div>
-            <div class="footer-section">
-            <h4>ChefDishes</h4>
-            <p>Bringing World Class recipes to your kitchen</p>
-            </div>
-            <div class="footer-section"><a href="./pages/about.html">About Us</a></div>
-            <div class="footer-section">Quick links
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./pages/upload.html">Upload Recipes</a></li>
-                </ul>
-            </div>
-            <div class="footer-section"><a href="./pages/contact.html">Contact Us</a></div>
-            <div class="footer-bottom">
+    <footer>
+        <div class="footer-head">ChefDishes
+            <p style='font-style: italic;'>Bringing world class dishes to you!</p>
+        </div>
+
+        <div class="link-content"><h3>Quick Links</h3>
+            <a href="./index.html">Home</a>
+            <a href="./pages/contact.html">Contact Us</a>
+            <a href="./pages/about.html">About Us</a>
+        </div>
+
+        <div class="footer-bottom">
                 &copy; 2026 ChefDishes | All Rights Reserved
-            </div>
-        </footer>
-        
-
-        <script>
-            console.log(myRecipes);
-            function showMnu(){
-                const board=document.getElementById("menu-board");
-                myRecipes.forEach(function(dish){
-                    board.innerHTML +=`
-                    <div class="recipe-card">
-                        <h3>${dish.title}</h3>
-                        <p>Cooked by:${dish.chef}</p>
-                        <p>INGREDIENTS:${dish.ingredients}</p>
-                        <p>INSTRUCTIONS:${dish.instructions}</p>
-                        <img src=${dish.image}</p>
-                        </div>
-                    `;
-                });
-            }
-
-            function detail_eng(title){
-                console.log(title);
-            }
-        
-            /*showMenu();*/
-        </script>
-
+        </div>
+    </footer>
     </body>
 </html>
